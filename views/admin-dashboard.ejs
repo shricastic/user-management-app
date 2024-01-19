@@ -1,0 +1,84 @@
+<!-- views/admin/dashboard.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+</head>
+<body>
+  <h1>Admin Dashboard</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>User ID</th>
+        <th>Name</th>
+        <th>Photo</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% users.forEach(user => { %>
+        <tr>
+          <td><%= user.userId %></td>
+          <td><%= user.name %></td>
+          <td><img src="<%= user.profilePic %>" alt="User Photo"></td>
+          <td>
+            <button onclick="approve('<%= user.userId %>')">Approve</button>
+            <button onclick="deleteUser('<%= user.userId %>')">Delete</button>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+  <script>
+    async function approve(userId) {
+      try {
+        const response = await fetch('/admin/approve', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ userId }),
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          alert('User approved successfully');
+          // Optionally, update the UI to reflect the approval
+        } else {
+          alert('User not found');
+        }
+      } catch (error) {
+        console.error('Error approving user:', error);
+        alert('Internal Server Error');
+      }
+    }
+
+    async function deleteUser(userId) {
+      try {
+        const response = await fetch('/admin/delete', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ userId }),
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          alert('User deleted successfully');
+          // Optionally, update the UI to reflect the deletion
+        } else {
+          alert('User not found');
+        }
+      } catch (error) {
+        console.error('Error deleting user:', error);
+        alert('Internal Server Error');
+      }
+    }
+  </script>
+</body>
+</html>

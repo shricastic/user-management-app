@@ -1,0 +1,50 @@
+<!-- public/create-user.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create User</title>
+  <link rel="stylesheet" href="./create-user.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container">
+
+    <div class="formside">
+      <div class="formdiv">
+        <h1>Create user</h1>
+        <form action="/admin/createuser" method="post">
+          <label for="userId"></label>
+          <input type="text" id="userId" name="userId" placeholder="user id " required>
+          <br>
+          <label for="password"></label>
+          <input placeholder="password" type="password" id="password" name="password" required>
+          <br>
+          <button type="submit" value="Login">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="formside">
+      <div class="formdiv">
+        <h1>View user</h1>
+        <form action="/admin/createuser" method="post">
+          <label for="userId"></label>
+          <input type="text"  placeholder="user 1" >
+          <br>
+          <label for="password"></label>
+          <input placeholder="user 2" >
+          <br>
+          <button type="submit" value="Login">view users</button>
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+</html>

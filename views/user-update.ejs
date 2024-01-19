@@ -1,0 +1,22 @@
+<!-- public/user-update.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+</head>
+<body>
+  <h1>User Profile</h1>
+  <form action="/profile/update" method="POST" enctype="multipart/form-data">
+    <label for="newName">New Name:</label>
+    <input type="text" id="newName" name="newName" required>
+    <br>
+    <label for="profilePic">Profile Picture:</label>
+    <input type="file" id="profilePic" name="profilePic" value="" required>
+    <br>
+    <button type="submit">submit</button>
+  </form>
+</body>
+</html>
+

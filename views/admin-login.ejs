@@ -1,0 +1,41 @@
+<!-- public/admin-login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="./admin-login.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container">
+
+    <div class="logoside">
+      <div class="logodiv">
+        <h1>Logo</h1>
+      </div>
+
+    </div>
+
+    <div class="formside">
+      <div class="formdiv">
+        <h1>Admin Login</h1>
+        <form action="/admin" method="post">
+          <label for="userId"></label>
+          <input type="text" id="userId" name="userId" placeholder="admin Id" required>
+          <br>
+          <label for="password"></label>
+          <input placeholder="password" type="password" id="password" name="password" required>
+          <br>
+          <button type="submit" value="Login">Login</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

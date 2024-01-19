@@ -1,0 +1,26 @@
+<!-- public/user-profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+</head>
+<body>
+  <h1>User Profile</h1>
+  <div>
+    <img src="data:image/jpeg;base64,<%= user.profilePic %>" alt="Profile Picture">
+    <p>Name: <%= user.name %></p>
+    <p>Approval status: <% if(user.status){ %>
+      <span style="color: green;">approved</span>
+      <%} else { %>
+        <span style="color: red;">Not Approved</span>
+      <% } %>
+    </p>
+  </div>
+
+  <a href="/profile/update">
+    <button>Update Profile</button>
+  </a>
+</body>
+</html>

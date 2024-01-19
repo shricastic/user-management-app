@@ -1,0 +1,173 @@
+body{
+  background-color:#03013B ;
+  font-family: 'Roboto', sans-serif;
+  color: #646464 ;
+  margin:0;
+  
+}
+
+.container{
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  margin: 0;
+}
+
+
+
+
+
+.formside{
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.formdiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.formdiv input{
+  width: 22rem;
+  height: 3rem;
+  margin: 0.8rem;
+  border-radius: 0.5rem;
+  border: 0.1em solid #CDCDCD;
+  background: #FFF;
+  font-size: large;
+  padding: 0.2rem;
+  padding-left: 1rem;
+}
+
+.formdiv button{
+  background-color: blue;
+  color: #FFF;
+  width: 23.2rem;
+  height: 3rem;
+  margin: 0.8rem;
+  font-size: large;
+  border-radius: 0.5rem;
+
+}
+
+
+
+
+
+
+
+/*media queries*/
+@media only screen and (max-width: 1366px) {
+  body {
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  body {
+    
+  }
+  .container{
+    flex-direction: column;
+    justify-content: unset;
+  }
+
+  .logoside{
+    height: 30vh;
+    width: 100%;
+
+  }
+
+  .formside{
+    height: 70vh;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+  }
+
+  .container{
+    flex-direction: column;
+    justify-content: unset;
+  }
+
+  .logoside{
+    height: 30vh;
+    width: 100%;
+
+  }
+
+  .formside{
+    height: 70vh;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+  }
+  .container{
+    flex-direction: column;
+    justify-content: unset;
+  }
+
+  .logoside{
+    height: 30vh;
+    width: 100%;
+
+  }
+
+  .formside{
+    height: 50vh;
+    width: auto;
+  }
+
+  .formdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .formdiv input{
+    width: 18rem;
+    height: 3rem;
+  }
+  .formdiv button{
+    background-color: blue;
+    color: #FFF;
+    width: 19.2rem;
+    height: 3rem;
+  }
+  
+  
+}
+
+@media only screen and (max-width: 320px) {
+  body {
+  }
+  .container{
+    flex-direction: column;
+    justify-content: unset;
+    height: 100vh;
+  }
+
+  .logoside{
+    height: 30vh;
+    width: 100%;
+
+  }
+
+  .formside{
+    height: 70vh;
+    width: auto;
+  }
+}
